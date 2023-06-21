@@ -11,7 +11,7 @@ int board[SIZE][SIZE];
 char piece_white[][5] = {" ♔", " ♕", " ♖", " ♗", " ♘", " ♙"};
 char piece_black[][5] = {" ♚", " ♛", " ♜", " ♝", " ♞", " ♟"};
 
-int main() {
+void printBoard() {
     printf(" A  B  C  D  E  F  G  H\n");
     for (size_t row = 0; row < SIZE; row++) {
         for (size_t col = 0; col < SIZE; col++) {
@@ -26,5 +26,9 @@ int main() {
         printf("%s %zu", COLOR_CLEAR, row + 1);
         putchar('\n');
     }
+}
+
+int main() {
+    printBoard();
     return 0;
 }
