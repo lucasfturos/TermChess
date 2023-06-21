@@ -12,8 +12,9 @@ char piece_white[][5] = {" ♔", " ♕", " ♖", " ♗", " ♘", " ♙"};
 char piece_black[][5] = {" ♚", " ♛", " ♜", " ♝", " ♞", " ♟"};
 
 void printBoard() {
-    printf(" A  B  C  D  E  F  G  H\n");
-    for (size_t row = 0; row < SIZE; row++) {
+    puts("    A  B  C  D  E  F  G  H");
+    for (size_t row = SIZE; row >= 1; row--) {
+        printf("%s %zu ", COLOR_CLEAR, row);
         for (size_t col = 0; col < SIZE; col++) {
             if (row % 2) {
                 col % 2 ? printf("%s   ", COLOR_BLACK)
@@ -23,9 +24,10 @@ void printBoard() {
                         : printf("%s   ", COLOR_BLACK);
             }
         }
-        printf("%s %zu", COLOR_CLEAR, row + 1);
+        printf("%s %zu", COLOR_CLEAR, row );
         putchar('\n');
     }
+    puts("    A  B  C  D  E  F  G  H");
 }
 
 int main() {
