@@ -1,5 +1,5 @@
-#include "board.h"
-#include "inputs.h"
+#include "Board/board.h"
+#include "Inputs/inputs.h"
 
 struct Position {
     int x, y;
