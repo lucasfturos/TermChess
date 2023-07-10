@@ -11,6 +11,7 @@ int validaInput(char *input) {
 }
 
 void entradaUsuario() {
+    struct Position pos_init, pos_fim;
     char peca_get[4], peca_set[4];
     do {
         puts("Escolha a peça pela sua posição.\nEx: 'a1' escolhe a torre.");
@@ -24,6 +25,9 @@ void entradaUsuario() {
 
     } while (!validaInput(peca_get));
 
+    pos_init.x = peca_get[0] - 'a';
+    pos_init.y = peca_get[1] - '1';
+
     do {
         puts("Escolha a posição que quer colocar a peça.");
         puts("Informe a posição:");
@@ -36,5 +40,9 @@ void entradaUsuario() {
 
     } while (!validaInput(peca_set));
 
-    puts("Entradas válidas");
+    pos_fim.x = peca_set[0] - 'a';
+    pos_fim.y = peca_set[1] - '1';
+
+    printf("Pos i: %d %d | Pos f: %d %d\n", pos_init.x, pos_init.y, pos_fim.x,
+           pos_fim.y);
 }
