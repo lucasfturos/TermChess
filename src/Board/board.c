@@ -1,14 +1,5 @@
 #include "board.h"
 
-char piece_black[][5] = {"♙", "♖", "♘", "♗", "♕", "♔"};
-char piece_white[][5] = {"♟", "♜", "♞", "♝", "♛", "♚"};
-
-int board[SIZE][SIZE] = {
-    {2, 3, 4, 5, 6, 4, 3, 2},         {1, 1, 1, 1, 1, 1, 1, 1},
-    {0, 0, 0, 0, 0, 0, 0, 0},         {0, 0, 0, 0, 0, 0, 0, 0},
-    {0, 0, 0, 0, 0, 0, 0, 0},         {0, 0, 0, 0, 0, 0, 0, 0},
-    {-1, -1, -1, -1, -1, -1, -1, -1}, {-2, -3, -4, -5, -6, -4, -3, -2}};
-
 void printPieces(int pieceValue) {
     if (pieceValue < 0) {
         printf("%s ", piece_white[abs(pieceValue) - 1]);
