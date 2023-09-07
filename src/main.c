@@ -3,8 +3,7 @@
 int main() {
     while (1) {
         printBoard();
-        entradaUsuario();
-        break;
+        inputPlayer();
     }
 
     return 0;

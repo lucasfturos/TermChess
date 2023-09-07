@@ -53,4 +53,3 @@ $(BIN_DIR):
 .PHONY: clean
 clean:
 	@rm -rf $(BIN_DIR) $(OBJ_DIR)
-

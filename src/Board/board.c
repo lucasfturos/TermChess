@@ -1,5 +1,11 @@
 #include "board.h"
 
+int board[SIZE][SIZE] = {
+    {2, 3, 4, 5, 6, 4, 3, 2},         {1, 1, 1, 1, 1, 1, 1, 1},
+    {0, 0, 0, 0, 0, 0, 0, 0},         {0, 0, 0, 0, 0, 0, 0, 0},
+    {0, 0, 0, 0, 0, 0, 0, 0},         {0, 0, 0, 0, 0, 0, 0, 0},
+    {-1, -1, -1, -1, -1, -1, -1, -1}, {-2, -3, -4, -5, -6, -4, -3, -2}};
+
 void printPieces(int pieceValue) {
     if (pieceValue < 0) {
         printf("%s ", piece_white[abs(pieceValue) - 1]);
@@ -11,7 +17,7 @@ void printPieces(int pieceValue) {
 }
 
 void printBoard() {
-    puts("\033c");
+    // puts("\033c");
     puts("   a b c d e f g h");
     for (size_t row = 0; row < SIZE; row++) {
         int indice = 8 - row;
